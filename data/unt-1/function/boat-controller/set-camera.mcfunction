@@ -1,0 +1,1 @@
+$attribute @s minecraft:camera_distance base set $(camera_value)
