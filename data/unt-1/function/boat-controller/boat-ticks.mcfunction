@@ -13,6 +13,6 @@ execute as @a at @s if entity @e[type=armor_stand,tag=unt-1.boat,distance=..5] r
 execute if block ~ ~1.45 ~ water run data modify entity @s Motion[1] set value 0.019
 
 # docking system
-execute if entity @s[tag=unt-1.unt-1.docked] unless entity @e[type=armor_stand,tag=unt-1.dock,distance=..1] run tag @s remove unt-1.unt-1.docked
-execute if entity @s[tag=unt-1.is_docking,tag=!unt-1.unt-1.docked] run return run function unt-1:boat-controller/process-docking
+execute if entity @s[tag=unt-1.docked] unless entity @e[type=armor_stand,tag=unt-1.dock,distance=..1] run tag @s remove unt-1.docked
+execute if entity @s[tag=unt-1.is_docking,tag=!unt-1.docked] run return run function unt-1:boat-controller/process-docking
 execute if entity @a[predicate=unt-1:boat-movement/dock] if entity @e[type=armor_stand,tag=unt-1.dock,distance=..4] run function unt-1:boat-controller/start-docking
