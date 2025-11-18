@@ -1,0 +1,32 @@
+# Mark slot above (-9) as occupied
+$execute if score #slot_$(slot) unt-1.slot_occupied matches 1 store result score #blocked unt-1.slot_occupied run scoreboard players set #blocked unt-1.slot_occupied $(slot)
+$execute if score #slot_$(slot) unt-1.slot_occupied matches 1 run scoreboard players remove #blocked unt-1.slot_occupied 9
+
+# Mark the blocked slot
+execute if score #blocked unt-1.slot_occupied matches 0 run scoreboard players set #slot_0 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 1 run scoreboard players set #slot_1 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 2 run scoreboard players set #slot_2 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 3 run scoreboard players set #slot_3 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 4 run scoreboard players set #slot_4 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 5 run scoreboard players set #slot_5 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 6 run scoreboard players set #slot_6 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 7 run scoreboard players set #slot_7 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 8 run scoreboard players set #slot_8 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 9 run scoreboard players set #slot_9 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 10 run scoreboard players set #slot_10 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 11 run scoreboard players set #slot_11 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 12 run scoreboard players set #slot_12 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 13 run scoreboard players set #slot_13 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 14 run scoreboard players set #slot_14 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 15 run scoreboard players set #slot_15 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 16 run scoreboard players set #slot_16 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 17 run scoreboard players set #slot_17 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 18 run scoreboard players set #slot_18 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 19 run scoreboard players set #slot_19 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 20 run scoreboard players set #slot_20 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 21 run scoreboard players set #slot_21 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 22 run scoreboard players set #slot_22 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 23 run scoreboard players set #slot_23 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 24 run scoreboard players set #slot_24 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 25 run scoreboard players set #slot_25 unt-1.slot_occupied 1
+execute if score #blocked unt-1.slot_occupied matches 26 run scoreboard players set #slot_26 unt-1.slot_occupied 1
