@@ -1,9 +1,5 @@
-# unt-1
-Untitled-1
-# Names
-- Fathomless
-- Depthless
-- Abyssal
+# [Fathomless]
+
 
 # Features?
 - Fishing
@@ -23,9 +19,19 @@ Untitled-1
 | Press [Space] to deploy rod, when deployed press [Space] when meter aligns to reel in
 | Missing the meter causes youur reel progress to decrease.
 
+
+
+
+
 ## Fish Merchant
 # Appearance:
 | A smalll shop stand usually found at docks, accessable through docking and selecting the icon
+
+
+
+
+
+
 11/10/25 - Created boat model
 
 11/11/25 - Added movement controller and camera zoom
@@ -37,3 +43,5 @@ Untitled-1
 11/16/25 - implemented rough layout for custom sized items with inventory management
 
 11/17/25 - Introduuced rotatable fish for inventory managment
+
+11/19/25 - Autosort, Fishing, Dock, and More changes and polishing
