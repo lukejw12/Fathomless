@@ -1,16 +1,13 @@
-# Right edge - items that block right can't be placed in right column
 execute if items entity @s container.8 *[custom_data~{unt-1.blocks_right:1b}] run return run function unt-1:inventory/return-item {slot:8}
 execute if items entity @s container.17 *[custom_data~{unt-1.blocks_right:1b}] run return run function unt-1:inventory/return-item {slot:17}
 execute if items entity @s container.26 *[custom_data~{unt-1.blocks_right:1b}] run return run function unt-1:inventory/return-item {slot:26}
 execute if items entity @s container.35 *[custom_data~{unt-1.blocks_right:1b}] run return run function unt-1:inventory/return-item {slot:35}
 
-# Left edge - items that block left can't be placed in first column
 execute if items entity @s container.0 *[custom_data~{unt-1.blocks_left:1b}] run return run function unt-1:inventory/return-item {slot:0}
 execute if items entity @s container.9 *[custom_data~{unt-1.blocks_left:1b}] run return run function unt-1:inventory/return-item {slot:9}
 execute if items entity @s container.18 *[custom_data~{unt-1.blocks_left:1b}] run return run function unt-1:inventory/return-item {slot:18}
 execute if items entity @s container.27 *[custom_data~{unt-1.blocks_left:1b}] run return run function unt-1:inventory/return-item {slot:27}
 
-# Top row - items that block up can't be placed in first row (hotbar)
 execute if items entity @s container.0 *[custom_data~{unt-1.blocks_up:1b}] run return run function unt-1:inventory/return-item {slot:0}
 execute if items entity @s container.1 *[custom_data~{unt-1.blocks_up:1b}] run return run function unt-1:inventory/return-item {slot:1}
 execute if items entity @s container.2 *[custom_data~{unt-1.blocks_up:1b}] run return run function unt-1:inventory/return-item {slot:2}
@@ -21,7 +18,6 @@ execute if items entity @s container.6 *[custom_data~{unt-1.blocks_up:1b}] run r
 execute if items entity @s container.7 *[custom_data~{unt-1.blocks_up:1b}] run return run function unt-1:inventory/return-item {slot:7}
 execute if items entity @s container.8 *[custom_data~{unt-1.blocks_up:1b}] run return run function unt-1:inventory/return-item {slot:8}
 
-# Bottom row - items that block down can't be placed in last row
 execute if items entity @s container.27 *[custom_data~{unt-1.blocks_down:1b}] run return run function unt-1:inventory/return-item {slot:27}
 execute if items entity @s container.28 *[custom_data~{unt-1.blocks_down:1b}] run return run function unt-1:inventory/return-item {slot:28}
 execute if items entity @s container.29 *[custom_data~{unt-1.blocks_down:1b}] run return run function unt-1:inventory/return-item {slot:29}
@@ -32,7 +28,6 @@ execute if items entity @s container.33 *[custom_data~{unt-1.blocks_down:1b}] ru
 execute if items entity @s container.34 *[custom_data~{unt-1.blocks_down:1b}] run return run function unt-1:inventory/return-item {slot:34}
 execute if items entity @s container.35 *[custom_data~{unt-1.blocks_down:1b}] run return run function unt-1:inventory/return-item {slot:35}
 
-# Bottom row - items that block diagonal down (existing check for old rotation)
 execute if items entity @s container.27 *[custom_data~{unt-1.blocks_diagonal:1b}] run return run function unt-1:inventory/return-item {slot:27}
 execute if items entity @s container.28 *[custom_data~{unt-1.blocks_diagonal:1b}] run return run function unt-1:inventory/return-item {slot:28}
 execute if items entity @s container.29 *[custom_data~{unt-1.blocks_diagonal:1b}] run return run function unt-1:inventory/return-item {slot:29}
@@ -43,7 +38,6 @@ execute if items entity @s container.33 *[custom_data~{unt-1.blocks_diagonal:1b}
 execute if items entity @s container.34 *[custom_data~{unt-1.blocks_diagonal:1b}] run return run function unt-1:inventory/return-item {slot:34}
 execute if items entity @s container.35 *[custom_data~{unt-1.blocks_diagonal:1b}] run return run function unt-1:inventory/return-item {slot:35}
 
-# Check for overlapping blocked zones (keep existing checks)
 execute if items entity @s container.0 *[custom_data~{unt-1.blocks_diagonal:1b}] if items entity @s container.9 *[custom_data~{unt-1.blocks_right:1b}] run return run function unt-1:inventory/return-item {slot:9}
 execute if items entity @s container.1 *[custom_data~{unt-1.blocks_diagonal:1b}] if items entity @s container.10 *[custom_data~{unt-1.blocks_right:1b}] run return run function unt-1:inventory/return-item {slot:10}
 execute if items entity @s container.2 *[custom_data~{unt-1.blocks_diagonal:1b}] if items entity @s container.11 *[custom_data~{unt-1.blocks_right:1b}] run return run function unt-1:inventory/return-item {slot:11}
@@ -71,7 +65,6 @@ execute if items entity @s container.23 *[custom_data~{unt-1.blocks_diagonal:1b}
 execute if items entity @s container.24 *[custom_data~{unt-1.blocks_diagonal:1b}] if items entity @s container.33 *[custom_data~{unt-1.blocks_right:1b}] run return run function unt-1:inventory/return-item {slot:33}
 execute if items entity @s container.25 *[custom_data~{unt-1.blocks_diagonal:1b}] if items entity @s container.34 *[custom_data~{unt-1.blocks_right:1b}] run return run function unt-1:inventory/return-item {slot:34}
 
-# Call all the helper check functions
 function unt-1:inventory/check-slots-0-6
 function unt-1:inventory/check-slots-9-16
 function unt-1:inventory/check-slots-18-25

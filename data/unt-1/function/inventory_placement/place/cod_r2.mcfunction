@@ -1,4 +1,3 @@
-# Place COD rotation 2 at current slot
 execute if score @s unt-1.inv_slot matches 9 run item replace entity @s container.9 with gray_dye[max_stack_size=1,custom_data={unt-1.multi_slot:1b,unt-1.rotatable:1b,unt-1.item_type:"cod",unt-1.rotation:2b,unt-1.blocks_left:1b,unt-1.blocks_diagonal_up_left:1b},item_model="unt-1:fish/shallow/cod/cod_180",item_name={"color":"white","italic":false,"text":"Cod"}]
 execute if score @s unt-1.inv_slot matches 10 run item replace entity @s container.10 with gray_dye[max_stack_size=1,custom_data={unt-1.multi_slot:1b,unt-1.rotatable:1b,unt-1.item_type:"cod",unt-1.rotation:2b,unt-1.blocks_left:1b,unt-1.blocks_diagonal_up_left:1b},item_model="unt-1:fish/shallow/cod/cod_180",item_name={"color":"white","italic":false,"text":"Cod"}]
 execute if score @s unt-1.inv_slot matches 11 run item replace entity @s container.11 with gray_dye[max_stack_size=1,custom_data={unt-1.multi_slot:1b,unt-1.rotatable:1b,unt-1.item_type:"cod",unt-1.rotation:2b,unt-1.blocks_left:1b,unt-1.blocks_diagonal_up_left:1b},item_model="unt-1:fish/shallow/cod/cod_180",item_name={"color":"white","italic":false,"text":"Cod"}]
@@ -27,6 +26,5 @@ execute if score @s unt-1.inv_slot matches 33 run item replace entity @s contain
 execute if score @s unt-1.inv_slot matches 34 run item replace entity @s container.34 with gray_dye[max_stack_size=1,custom_data={unt-1.multi_slot:1b,unt-1.rotatable:1b,unt-1.item_type:"cod",unt-1.rotation:2b,unt-1.blocks_left:1b,unt-1.blocks_diagonal_up_left:1b},item_model="unt-1:fish/shallow/cod/cod_180",item_name={"color":"white","italic":false,"text":"Cod"}]
 execute if score @s unt-1.inv_slot matches 35 run item replace entity @s container.35 with gray_dye[max_stack_size=1,custom_data={unt-1.multi_slot:1b,unt-1.rotatable:1b,unt-1.item_type:"cod",unt-1.rotation:2b,unt-1.blocks_left:1b,unt-1.blocks_diagonal_up_left:1b},item_model="unt-1:fish/shallow/cod/cod_180",item_name={"color":"white","italic":false,"text":"Cod"}]
 
-# Mark success
 scoreboard players set @s unt-1.placement_success 1
 playsound minecraft:entity.item.pickup player @s ~ ~ ~ 0.5 1.2

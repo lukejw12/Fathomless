@@ -1,0 +1,102 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Harbor Dock",
+    "color": "aqua",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "═══════════════════════════\n",
+          "color": "gray"
+        },
+        {
+          "text": "You've docked at the harbor.\n",
+          "color": "white"
+        },
+        {
+          "text": "Where would you like to go?\n",
+          "color": "gray",
+          "italic": true
+        },
+        {
+          "text": "═══════════════════════════",
+          "color": "gray"
+        }
+      ],
+      "width": 300
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "🐟 Fish Market",
+        "color": "green",
+        "bold": true
+      },
+      "tooltip": {
+        "text": "Sell your fish for emeralds",
+        "color": "gray"
+      },
+      "width": 200,
+      "action": {
+        "type": "show_dialog",
+        "dialog": "unt-1:fish-market-dialog"
+      }
+    },
+    {
+      "label": {
+        "text": "🎣 Bait & Tackle",
+        "color": "yellow",
+        "bold": true
+      },
+      "tooltip": {
+        "text": "Buy bait and fishing supplies",
+        "color": "gray"
+      },
+      "width": 200,
+      "action": {
+        "type": "run_command",
+        "command": "tellraw @s {\"text\":\"Coming soon!\",\"color\":\"yellow\"}"
+      }
+    },
+    {
+      "label": {
+        "text": "⚙ Boat Upgrades",
+        "color": "gold",
+        "bold": true
+      },
+      "tooltip": {
+        "text": "Upgrade your boat",
+        "color": "gray"
+      },
+      "width": 200,
+      "action": {
+        "type": "run_command",
+        "command": "tellraw @s {\"text\":\"Coming soon!\",\"color\":\"yellow\"}"
+      }
+    },
+    {
+      "label": {
+        "text": "⛵ Set Sail",
+        "color": "red",
+        "bold": true
+      },
+      "tooltip": {
+        "text": "Undock and continue sailing",
+        "color": "gray"
+      },
+      "width": 200,
+      "action": {
+        "type": "run_command",
+        "command": "function unt-1:market/undock"
+      }
+    }
+  ],
+  "columns": 1,
+  "pause": false,
+  "can_close_with_escape": true
+}

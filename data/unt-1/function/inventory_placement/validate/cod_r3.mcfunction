@@ -1,46 +1,27 @@
-# Rotation 3: blocks up (-9) and diagonal-up-right (-8)
-# Assume valid unless proven otherwise
+
 scoreboard players set #valid unt-1.placement_success 1
 
-# Check edge constraints - can't place in right column
 scoreboard players operation #check_col unt-1.inv_slot = @s unt-1.inv_slot
-scoreboard players remove #check_col unt-1.inv_slot 9
-scoreboard players operation #check_col unt-1.inv_slot %= #9 unt-1.const
-execute if score #check_col unt-1.inv_slot matches 8 run scoreboard players set #valid unt-1.placement_success 0
-# Rotation 0: blocks right (+1) and diagonal-down-right (+10)
-# Assume valid unless proven otherwise
-scoreboard players set #valid unt-1.placement_success 1
-
-# Check edge constraints - can't place in right column
-scoreboard players operation #check_col unt-1.inv_slot = @s unt-1.inv_slot
-scoreboard players remove #check_col unt-1.inv_slot 9
 scoreboard players operation #check_col unt-1.inv_slot %= #9 unt-1.const
 execute if score #check_col unt-1.inv_slot matches 8 run scoreboard players set #valid unt-1.placement_success 0
 
-# Can't place in bottom row
 execute if score @s unt-1.inv_slot matches 27..35 run scoreboard players set #valid unt-1.placement_success 0
 
-# Calculate slots we would block
 scoreboard players operation #check_right unt-1.inv_slot = @s unt-1.inv_slot
 scoreboard players add #check_right unt-1.inv_slot 1
 
 scoreboard players operation #check_diag unt-1.inv_slot = @s unt-1.inv_slot
 scoreboard players add #check_diag unt-1.inv_slot 10
 
-# DEBUG - show what we're checking
 
-# Show occupancy of those slots
-# Can't place in top row
 execute if score @s unt-1.inv_slot matches 9..17 run scoreboard players set #valid unt-1.placement_success 0
 
-# Calculate slots we would block
 scoreboard players operation #check_up unt-1.inv_slot = @s unt-1.inv_slot
 scoreboard players remove #check_up unt-1.inv_slot 9
 
 scoreboard players operation #check_diag unt-1.inv_slot = @s unt-1.inv_slot
 scoreboard players remove #check_diag unt-1.inv_slot 8
 
-# Check if those slots are free
 execute if score #check_up unt-1.inv_slot matches 0 if score #slot_0 unt-1.slot_occupied matches 1.. run scoreboard players set #valid unt-1.placement_success 0
 execute if score #check_up unt-1.inv_slot matches 1 if score #slot_1 unt-1.slot_occupied matches 1.. run scoreboard players set #valid unt-1.placement_success 0
 execute if score #check_up unt-1.inv_slot matches 2 if score #slot_2 unt-1.slot_occupied matches 1.. run scoreboard players set #valid unt-1.placement_success 0
@@ -96,10 +77,9 @@ execute if score #check_diag unt-1.inv_slot matches 24 if score #slot_24 unt-1.s
 execute if score #check_diag unt-1.inv_slot matches 25 if score #slot_25 unt-1.slot_occupied matches 1.. run scoreboard players set #valid unt-1.placement_success 0
 execute if score #check_diag unt-1.inv_slot matches 26 if score #slot_26 unt-1.slot_occupied matches 1.. run scoreboard players set #valid unt-1.placement_success 0
 execute if score #check_diag unt-1.inv_slot matches 27 if score #slot_27 unt-1.slot_occupied matches 1.. run scoreboard players set #valid unt-1.placement_success 0
-# Only place if valid
 execute if score #valid unt-1.placement_success matches 1 run function unt-1:inventory_placement/place/cod_r3
 execute if score #valid unt-1.placement_success matches 1 run scoreboard players set @s unt-1.placement_success 1
 
-# If invalid, ensure success stays 0
 execute if score #valid unt-1.placement_success matches 0 run scoreboard players set @s unt-1.placement_success 0
-function unt-1:inventory_placement/mark_slot_occupied_direct
+
+execute if score #valid unt-1.placement_success matches 1 run function unt-1:inventory_placement/mark_slot_occupied_direct

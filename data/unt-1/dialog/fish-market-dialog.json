@@ -1,0 +1,86 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "🐟 Fish Market",
+    "color": "green",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "text": "═══════════════════════════\n",
+          "color": "gray"
+        },
+        {
+          "text": "Welcome to the Fish Market!\n",
+          "color": "white"
+        },
+        {
+          "text": "Sell your catch for emeralds.\n",
+          "color": "gray",
+          "italic": true
+        },
+        {
+          "text": "═══════════════════════════",
+          "color": "gray"
+        }
+      ],
+      "width": 300
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "💰 Sell All Fish",
+        "color": "gold",
+        "bold": true
+      },
+      "tooltip": {
+        "text": "Sell all fish in your inventory",
+        "color": "gray"
+      },
+      "width": 200,
+      "action": {
+        "type": "run_command",
+        "command": "function unt-1:market/sell_all_fish"
+      }
+    },
+    {
+      "label": {
+        "text": "📊 View Prices",
+        "color": "aqua",
+        "bold": true
+      },
+      "tooltip": {
+        "text": "Check current fish prices",
+        "color": "gray"
+      },
+      "width": 200,
+      "action": {
+        "type": "show_dialog",
+        "dialog": "unt-1:fish_prices_dialog"
+      }
+    },
+    {
+      "label": {
+        "text": "🔙 Back to Dock",
+        "color": "red",
+        "bold": true
+      },
+      "tooltip": {
+        "text": "Return to dock menu",
+        "color": "gray"
+      },
+      "width": 200,
+      "action": {
+        "type": "show_dialog",
+        "dialog": "unt-1:dock-main-menu"
+      }
+    }
+  ],
+  "columns": 1,
+  "pause": false,
+  "can_close_with_escape": true
+}

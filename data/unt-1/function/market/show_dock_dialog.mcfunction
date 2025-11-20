@@ -1,0 +1,1 @@
+dialog show @s unt-1:dock-main-menu

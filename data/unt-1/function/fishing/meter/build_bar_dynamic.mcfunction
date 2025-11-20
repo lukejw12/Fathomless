@@ -1,13 +1,9 @@
-# Initialize empty bar
 data modify storage unt-1:temp bar set value {seg0:"░",seg1:"░",seg2:"░",seg3:"░",seg4:"░",seg5:"░",seg6:"░",seg7:"░",seg8:"░",seg9:"░",seg10:"░",seg11:"░",seg12:"░",seg13:"░",seg14:"░",seg15:"░",seg16:"░",seg17:"░",seg18:"░",seg19:"░"}
 
-# Mark green segments
 scoreboard players operation #green_start unt-1.temp = @s unt-1.fishing_target
 scoreboard players operation #green_end unt-1.temp = @s unt-1.fishing_target
 scoreboard players operation #green_end unt-1.temp += @s unt-1.fishing_zone_size
-# Don't subtract 1 anymore
 
-# Set green segments
 execute if score #green_start unt-1.temp matches ..0 if score #green_end unt-1.temp matches 1.. run data modify storage unt-1:temp bar.seg0 set value "█"
 execute if score #green_start unt-1.temp matches ..1 if score #green_end unt-1.temp matches 2.. run data modify storage unt-1:temp bar.seg1 set value "█"
 execute if score #green_start unt-1.temp matches ..2 if score #green_end unt-1.temp matches 3.. run data modify storage unt-1:temp bar.seg2 set value "█"
@@ -29,9 +25,7 @@ execute if score #green_start unt-1.temp matches ..17 if score #green_end unt-1.
 execute if score #green_start unt-1.temp matches ..18 if score #green_end unt-1.temp matches 19.. run data modify storage unt-1:temp bar.seg18 set value "█"
 execute if score #green_start unt-1.temp matches ..19 if score #green_end unt-1.temp matches 20.. run data modify storage unt-1:temp bar.seg19 set value "█"
 
-# Store cursor position and progress
 execute store result storage unt-1:temp bar.cursor int 1 run scoreboard players get @s unt-1.fishing_tick
 execute store result storage unt-1:temp bar.progress int 1 run scoreboard players get @s unt-1.fishing_progress
 
-# Display with macro
 function unt-1:fishing/meter/display_bar with storage unt-1:temp bar

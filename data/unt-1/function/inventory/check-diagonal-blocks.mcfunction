@@ -1,4 +1,3 @@
-# If item at X blocks diagonal (+10), check if there's ANY item at X+10
 execute if items entity @s container.0 *[custom_data~{unt-1.blocks_diagonal:1b}] if items entity @s container.10 * run function unt-1:inventory/return-item {slot:10}
 execute if items entity @s container.1 *[custom_data~{unt-1.blocks_diagonal:1b}] if items entity @s container.11 * run function unt-1:inventory/return-item {slot:11}
 execute if items entity @s container.2 *[custom_data~{unt-1.blocks_diagonal:1b}] if items entity @s container.12 * run function unt-1:inventory/return-item {slot:12}
@@ -26,7 +25,6 @@ execute if items entity @s container.23 *[custom_data~{unt-1.blocks_diagonal:1b}
 execute if items entity @s container.24 *[custom_data~{unt-1.blocks_diagonal:1b}] if items entity @s container.34 * run function unt-1:inventory/return-item {slot:34}
 execute if items entity @s container.25 *[custom_data~{unt-1.blocks_diagonal:1b}] if items entity @s container.35 * run function unt-1:inventory/return-item {slot:35}
 
-# Reverse: if item at X+10 exists, check if item at X blocks diagonal
 execute if items entity @s container.10 * if items entity @s container.0 *[custom_data~{unt-1.blocks_diagonal:1b}] run function unt-1:inventory/return-item {slot:10}
 execute if items entity @s container.11 * if items entity @s container.1 *[custom_data~{unt-1.blocks_diagonal:1b}] run function unt-1:inventory/return-item {slot:11}
 execute if items entity @s container.12 * if items entity @s container.2 *[custom_data~{unt-1.blocks_diagonal:1b}] run function unt-1:inventory/return-item {slot:12}

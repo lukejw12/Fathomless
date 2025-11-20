@@ -1,10 +1,7 @@
-# Stop if we've checked all inventory slots (9-35)
 execute if score @s unt-1.inv_slot matches 36.. run return fail
 
-# Stop if we already placed successfully
 execute if score @s unt-1.placement_success matches 1 run return fail
 
-# Check if current slot is occupied
 scoreboard players set #slot_free unt-1.slot_occupied 0
 
 execute if score @s unt-1.inv_slot matches 9 if score #slot_9 unt-1.slot_occupied matches 0 run scoreboard players set #slot_free unt-1.slot_occupied 1
@@ -35,16 +32,12 @@ execute if score @s unt-1.inv_slot matches 33 if score #slot_33 unt-1.slot_occup
 execute if score @s unt-1.inv_slot matches 34 if score #slot_34 unt-1.slot_occupied matches 0 run scoreboard players set #slot_free unt-1.slot_occupied 1
 execute if score @s unt-1.inv_slot matches 35 if score #slot_35 unt-1.slot_occupied matches 0 run scoreboard players set #slot_free unt-1.slot_occupied 1
 
-# If occupied, skip to next
 execute if score #slot_free unt-1.slot_occupied matches 0 run scoreboard players add @s unt-1.inv_slot 1
 execute if score #slot_free unt-1.slot_occupied matches 0 run return run function unt-1:inventory_placement/scan_slot
 
-# If free, try all rotations
 execute if score #slot_free unt-1.slot_occupied matches 1 run function unt-1:inventory_placement/try_all_rotations
 
-# If placement successful, stop
 execute if score @s unt-1.placement_success matches 1 run return fail
 
-# Try next slot
 scoreboard players add @s unt-1.inv_slot 1
 function unt-1:inventory_placement/scan_slot

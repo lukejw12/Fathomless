@@ -1,8 +1,6 @@
-# Mark slot to the right (+1) as occupied
 $execute if score #slot_$(slot) unt-1.slot_occupied matches 1 store result score #blocked unt-1.slot_occupied run scoreboard players set #blocked unt-1.slot_occupied $(slot)
 $execute if score #slot_$(slot) unt-1.slot_occupied matches 1 run scoreboard players add #blocked unt-1.slot_occupied 1
 
-# Mark the blocked slot
 execute if score #blocked unt-1.slot_occupied matches 10 run scoreboard players set #slot_10 unt-1.slot_occupied 1
 execute if score #blocked unt-1.slot_occupied matches 11 run scoreboard players set #slot_11 unt-1.slot_occupied 1
 execute if score #blocked unt-1.slot_occupied matches 12 run scoreboard players set #slot_12 unt-1.slot_occupied 1

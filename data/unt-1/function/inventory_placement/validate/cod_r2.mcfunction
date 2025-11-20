@@ -1,24 +1,17 @@
-# Rotation 2: blocks left (-1) and diagonal-up-left (-10)
-# Assume valid unless proven otherwise
 scoreboard players set #valid unt-1.placement_success 1
 
-# Check edge constraints - can't place in left column
 scoreboard players operation #check_col unt-1.inv_slot = @s unt-1.inv_slot
-scoreboard players remove #check_col unt-1.inv_slot 9
 scoreboard players operation #check_col unt-1.inv_slot %= #9 unt-1.const
 execute if score #check_col unt-1.inv_slot matches 0 run scoreboard players set #valid unt-1.placement_success 0
 
-# Can't place in top row
 execute if score @s unt-1.inv_slot matches 9..17 run scoreboard players set #valid unt-1.placement_success 0
 
-# Calculate slots we would block
 scoreboard players operation #check_left unt-1.inv_slot = @s unt-1.inv_slot
 scoreboard players remove #check_left unt-1.inv_slot 1
 
 scoreboard players operation #check_diag unt-1.inv_slot = @s unt-1.inv_slot
 scoreboard players remove #check_diag unt-1.inv_slot 10
 
-# Check if those slots are free
 execute if score #check_left unt-1.inv_slot matches 8 if score #slot_8 unt-1.slot_occupied matches 1.. run scoreboard players set #valid unt-1.placement_success 0
 execute if score #check_left unt-1.inv_slot matches 9 if score #slot_9 unt-1.slot_occupied matches 1.. run scoreboard players set #valid unt-1.placement_success 0
 execute if score #check_left unt-1.inv_slot matches 10 if score #slot_10 unt-1.slot_occupied matches 1.. run scoreboard players set #valid unt-1.placement_success 0
@@ -74,10 +67,9 @@ execute if score #check_diag unt-1.inv_slot matches 23 if score #slot_23 unt-1.s
 execute if score #check_diag unt-1.inv_slot matches 24 if score #slot_24 unt-1.slot_occupied matches 1.. run scoreboard players set #valid unt-1.placement_success 0
 execute if score #check_diag unt-1.inv_slot matches 25 if score #slot_25 unt-1.slot_occupied matches 1.. run scoreboard players set #valid unt-1.placement_success 0
 
-# Only place if valid
 execute if score #valid unt-1.placement_success matches 1 run function unt-1:inventory_placement/place/cod_r2
 execute if score #valid unt-1.placement_success matches 1 run scoreboard players set @s unt-1.placement_success 1
 
-# If invalid, ensure success stays 0
 execute if score #valid unt-1.placement_success matches 0 run scoreboard players set @s unt-1.placement_success 0
-function unt-1:inventory_placement/mark_slot_occupied_direct
+
+execute if score #valid unt-1.placement_success matches 1 run function unt-1:inventory_placement/mark_slot_occupied_direct

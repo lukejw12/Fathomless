@@ -1,11 +1,9 @@
-# Rotation 3 blocks: up (-9) and diagonal-up-right (-8)
 scoreboard players operation #mark_up unt-1.inv_slot = @s unt-1.inv_slot
 scoreboard players remove #mark_up unt-1.inv_slot 9
 
 scoreboard players operation #mark_diag unt-1.inv_slot = @s unt-1.inv_slot
 scoreboard players remove #mark_diag unt-1.inv_slot 8
 
-# Mark up slot
 execute if score #mark_up unt-1.inv_slot matches 0 run scoreboard players set #slot_0 unt-1.slot_occupied 1
 execute if score #mark_up unt-1.inv_slot matches 1 run scoreboard players set #slot_1 unt-1.slot_occupied 1
 execute if score #mark_up unt-1.inv_slot matches 2 run scoreboard players set #slot_2 unt-1.slot_occupied 1
@@ -34,7 +32,6 @@ execute if score #mark_up unt-1.inv_slot matches 24 run scoreboard players set #
 execute if score #mark_up unt-1.inv_slot matches 25 run scoreboard players set #slot_25 unt-1.slot_occupied 1
 execute if score #mark_up unt-1.inv_slot matches 26 run scoreboard players set #slot_26 unt-1.slot_occupied 1
 
-# Mark diagonal slot
 execute if score #mark_diag unt-1.inv_slot matches 1 run scoreboard players set #slot_1 unt-1.slot_occupied 1
 execute if score #mark_diag unt-1.inv_slot matches 2 run scoreboard players set #slot_2 unt-1.slot_occupied 1
 execute if score #mark_diag unt-1.inv_slot matches 3 run scoreboard players set #slot_3 unt-1.slot_occupied 1

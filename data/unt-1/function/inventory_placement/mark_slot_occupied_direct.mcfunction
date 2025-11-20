@@ -1,4 +1,3 @@
-# Mark the current slot as occupied
 execute if score @s unt-1.inv_slot matches 9 run scoreboard players set #slot_9 unt-1.slot_occupied 1
 execute if score @s unt-1.inv_slot matches 10 run scoreboard players set #slot_10 unt-1.slot_occupied 1
 execute if score @s unt-1.inv_slot matches 11 run scoreboard players set #slot_11 unt-1.slot_occupied 1
@@ -27,8 +26,14 @@ execute if score @s unt-1.inv_slot matches 33 run scoreboard players set #slot_3
 execute if score @s unt-1.inv_slot matches 34 run scoreboard players set #slot_34 unt-1.slot_occupied 1
 execute if score @s unt-1.inv_slot matches 35 run scoreboard players set #slot_35 unt-1.slot_occupied 1
 
-# Mark the blocked slots based on rotation
-execute if score @s unt-1.inv_rotation matches 0 run function unt-1:inventory_placement/mark_blocked_r0
-execute if score @s unt-1.inv_rotation matches 1 run function unt-1:inventory_placement/mark_blocked_r1
-execute if score @s unt-1.inv_rotation matches 2 run function unt-1:inventory_placement/mark_blocked_r2
-execute if score @s unt-1.inv_rotation matches 3 run function unt-1:inventory_placement/mark_blocked_r3
+# Cod
+execute if data storage unt-1:placement item{type:"cod"} if score @s unt-1.inv_rotation matches 0 run function unt-1:inventory_placement/cod/mark_blocked_r0
+execute if data storage unt-1:placement item{type:"cod"} if score @s unt-1.inv_rotation matches 1 run function unt-1:inventory_placement/cod/mark_blocked_r1
+execute if data storage unt-1:placement item{type:"cod"} if score @s unt-1.inv_rotation matches 2 run function unt-1:inventory_placement/cod/mark_blocked_r2
+execute if data storage unt-1:placement item{type:"cod"} if score @s unt-1.inv_rotation matches 3 run function unt-1:inventory_placement/cod/mark_blocked_r3
+
+# Blue Mackerel
+execute if data storage unt-1:placement item{type:"blue_mackerel"} if score @s unt-1.inv_rotation matches 0 run function unt-1:inventory_placement/blue-mackeral/mark_blocked_r0
+execute if data storage unt-1:placement item{type:"blue_mackerel"} if score @s unt-1.inv_rotation matches 1 run function unt-1:inventory_placement/blue-mackeral/mark_blocked_r1
+execute if data storage unt-1:placement item{type:"blue_mackerel"} if score @s unt-1.inv_rotation matches 2 run function unt-1:inventory_placement/blue-mackeral/mark_blocked_r2
+execute if data storage unt-1:placement item{type:"blue_mackerel"} if score @s unt-1.inv_rotation matches 3 run function unt-1:inventory_placement/blue-mackeral/mark_blocked_r3

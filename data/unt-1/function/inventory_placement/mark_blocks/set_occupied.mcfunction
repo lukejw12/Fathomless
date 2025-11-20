@@ -1,4 +1,3 @@
-# Universal setter for marking any slot as occupied based on #blocked score
 execute if score #blocked unt-1.slot_occupied matches 0 run scoreboard players set #slot_0 unt-1.slot_occupied 1
 execute if score #blocked unt-1.slot_occupied matches 1 run scoreboard players set #slot_1 unt-1.slot_occupied 1
 execute if score #blocked unt-1.slot_occupied matches 2 run scoreboard players set #slot_2 unt-1.slot_occupied 1

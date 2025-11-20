@@ -1,4 +1,3 @@
-# If item at X blocks down (+9), check if there's ANY item at X+9
 execute if items entity @s container.0 *[custom_data~{unt-1.blocks_down:1b}] if items entity @s container.9 * run function unt-1:inventory/return-item {slot:9}
 execute if items entity @s container.1 *[custom_data~{unt-1.blocks_down:1b}] if items entity @s container.10 * run function unt-1:inventory/return-item {slot:10}
 execute if items entity @s container.2 *[custom_data~{unt-1.blocks_down:1b}] if items entity @s container.11 * run function unt-1:inventory/return-item {slot:11}
@@ -29,7 +28,6 @@ execute if items entity @s container.24 *[custom_data~{unt-1.blocks_down:1b}] if
 execute if items entity @s container.25 *[custom_data~{unt-1.blocks_down:1b}] if items entity @s container.34 * run function unt-1:inventory/return-item {slot:34}
 execute if items entity @s container.26 *[custom_data~{unt-1.blocks_down:1b}] if items entity @s container.35 * run function unt-1:inventory/return-item {slot:35}
 
-# Reverse check
 execute if items entity @s container.9 * if items entity @s container.0 *[custom_data~{unt-1.blocks_down:1b}] run function unt-1:inventory/return-item {slot:9}
 execute if items entity @s container.10 * if items entity @s container.1 *[custom_data~{unt-1.blocks_down:1b}] run function unt-1:inventory/return-item {slot:10}
 execute if items entity @s container.11 * if items entity @s container.2 *[custom_data~{unt-1.blocks_down:1b}] run function unt-1:inventory/return-item {slot:11}

@@ -1,4 +1,3 @@
-# If item at X blocks diagonal-up-left (-10), check if there's ANY item at X-10
 execute if items entity @s container.10 *[custom_data~{unt-1.blocks_diagonal_up_left:1b}] if items entity @s container.0 * run function unt-1:inventory/return-item {slot:0}
 execute if items entity @s container.11 *[custom_data~{unt-1.blocks_diagonal_up_left:1b}] if items entity @s container.1 * run function unt-1:inventory/return-item {slot:1}
 execute if items entity @s container.12 *[custom_data~{unt-1.blocks_diagonal_up_left:1b}] if items entity @s container.2 * run function unt-1:inventory/return-item {slot:2}
@@ -26,7 +25,6 @@ execute if items entity @s container.33 *[custom_data~{unt-1.blocks_diagonal_up_
 execute if items entity @s container.34 *[custom_data~{unt-1.blocks_diagonal_up_left:1b}] if items entity @s container.24 * run function unt-1:inventory/return-item {slot:24}
 execute if items entity @s container.35 *[custom_data~{unt-1.blocks_diagonal_up_left:1b}] if items entity @s container.25 * run function unt-1:inventory/return-item {slot:25}
 
-# Reverse check
 execute if items entity @s container.0 * if items entity @s container.10 *[custom_data~{unt-1.blocks_diagonal_up_left:1b}] run function unt-1:inventory/return-item {slot:0}
 execute if items entity @s container.1 * if items entity @s container.11 *[custom_data~{unt-1.blocks_diagonal_up_left:1b}] run function unt-1:inventory/return-item {slot:1}
 execute if items entity @s container.2 * if items entity @s container.12 *[custom_data~{unt-1.blocks_diagonal_up_left:1b}] run function unt-1:inventory/return-item {slot:2}
