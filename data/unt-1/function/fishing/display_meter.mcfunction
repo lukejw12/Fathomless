@@ -1,3 +1,32 @@
+scoreboard players operation #bar_frame unt-1.temp = @s unt-1.fishing_progress
+scoreboard players operation #bar_frame unt-1.temp *= #23 unt-1.const
+scoreboard players operation #bar_frame unt-1.temp /= #100 unt-1.const
+
+execute if score #bar_frame unt-1.temp matches 0 run data modify storage unt-1:temp bar_char set value "\ub000"
+execute if score #bar_frame unt-1.temp matches 1 run data modify storage unt-1:temp bar_char set value "\ub001"
+execute if score #bar_frame unt-1.temp matches 2 run data modify storage unt-1:temp bar_char set value "\ub002"
+execute if score #bar_frame unt-1.temp matches 3 run data modify storage unt-1:temp bar_char set value "\ub003"
+execute if score #bar_frame unt-1.temp matches 4 run data modify storage unt-1:temp bar_char set value "\ub004"
+execute if score #bar_frame unt-1.temp matches 5 run data modify storage unt-1:temp bar_char set value "\ub005"
+execute if score #bar_frame unt-1.temp matches 6 run data modify storage unt-1:temp bar_char set value "\ub006"
+execute if score #bar_frame unt-1.temp matches 7 run data modify storage unt-1:temp bar_char set value "\ub007"
+execute if score #bar_frame unt-1.temp matches 8 run data modify storage unt-1:temp bar_char set value "\ub008"
+execute if score #bar_frame unt-1.temp matches 9 run data modify storage unt-1:temp bar_char set value "\ub009"
+execute if score #bar_frame unt-1.temp matches 10 run data modify storage unt-1:temp bar_char set value "\ub00a"
+execute if score #bar_frame unt-1.temp matches 11 run data modify storage unt-1:temp bar_char set value "\ub00b"
+execute if score #bar_frame unt-1.temp matches 12 run data modify storage unt-1:temp bar_char set value "\ub00c"
+execute if score #bar_frame unt-1.temp matches 13 run data modify storage unt-1:temp bar_char set value "\ub00d"
+execute if score #bar_frame unt-1.temp matches 14 run data modify storage unt-1:temp bar_char set value "\ub00e"
+execute if score #bar_frame unt-1.temp matches 15 run data modify storage unt-1:temp bar_char set value "\ub00f"
+execute if score #bar_frame unt-1.temp matches 16 run data modify storage unt-1:temp bar_char set value "\ub010"
+execute if score #bar_frame unt-1.temp matches 17 run data modify storage unt-1:temp bar_char set value "\ub011"
+execute if score #bar_frame unt-1.temp matches 18 run data modify storage unt-1:temp bar_char set value "\ub012"
+execute if score #bar_frame unt-1.temp matches 19 run data modify storage unt-1:temp bar_char set value "\ub013"
+execute if score #bar_frame unt-1.temp matches 20 run data modify storage unt-1:temp bar_char set value "\ub014"
+execute if score #bar_frame unt-1.temp matches 21 run data modify storage unt-1:temp bar_char set value "\ub015"
+execute if score #bar_frame unt-1.temp matches 22 run data modify storage unt-1:temp bar_char set value "\ub016"
+execute if score #bar_frame unt-1.temp matches 23.. run data modify storage unt-1:temp bar_char set value "\ub017"
+
 execute if score @s unt-1.target_size matches 0 if score @s unt-1.target_pos matches 0 run data modify storage unt-1:temp target_char set value "\uc000"
 execute if score @s unt-1.target_size matches 0 if score @s unt-1.target_pos matches 1 run data modify storage unt-1:temp target_char set value "\uc001"
 execute if score @s unt-1.target_size matches 0 if score @s unt-1.target_pos matches 2 run data modify storage unt-1:temp target_char set value "\uc002"

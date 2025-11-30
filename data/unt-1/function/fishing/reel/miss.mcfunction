@@ -6,7 +6,4 @@ execute if score @s unt-1.fishing_progress matches ..-1 run scoreboard players s
 
 scoreboard players add @s unt-1.fishing_misses 1
 
-playsound minecraft:block.note_block.bass player @s ~ ~ ~ 1 0.5
-particle angry_villager ~ ~1 ~ 0.3 0.3 0.3 0 5
-
 scoreboard players set @s unt-1.fishing_cooldown 5

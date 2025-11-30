@@ -8,4 +8,6 @@ execute as @a[tag=unt-1.fishing_complete_cooldown] run scoreboard players add @s
 execute as @a[tag=unt-1.fishing_complete_cooldown,scores={unt-1.cast_cooldown=30..}] run function unt-1:fishing/clear_cast_cooldown
 execute as @a[scores={unt-1.cast_cooldown=30..}] run scoreboard players reset @s unt-1.cast_cooldown
 
-execute as @a[predicate=unt-1:fishing/jump] run function unt-1:fishing/cast/attempt
+execute as @a[predicate=unt-1:fishing/jump,tag=!unt-1.space_pressed] run function unt-1:fishing/handle_space_press
+
+execute as @a[tag=unt-1.space_pressed] unless predicate unt-1:fishing/jump run tag @s remove unt-1.space_pressed

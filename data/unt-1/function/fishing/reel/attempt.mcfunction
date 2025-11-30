@@ -1,12 +1,13 @@
-execute if score @s unt-1.fishing_cooldown matches 1.. run return fail
+execute if score @s unt-1.fishing_grace matches 1.. run return fail
 
-scoreboard players operation #green_end_check unt-1.fishing_tick = @s unt-1.fishing_target
-scoreboard players operation #green_end_check unt-1.fishing_tick += @s unt-1.fishing_zone_size
 
-scoreboard players operation #cursor_next unt-1.fishing_tick = @s unt-1.fishing_tick
-scoreboard players add #cursor_next unt-1.fishing_tick 1
+scoreboard players operation #pos_diff unt-1.temp = @s unt-1.arrow_pos
+scoreboard players operation #pos_diff unt-1.temp -= @s unt-1.target_pos
 
-execute if score @s unt-1.fishing_tick >= @s unt-1.fishing_target if score @s unt-1.fishing_tick < #green_end_check unt-1.fishing_tick run return run function unt-1:fishing/reel/success
-execute if score #cursor_next unt-1.fishing_tick >= @s unt-1.fishing_target if score #cursor_next unt-1.fishing_tick < #green_end_check unt-1.fishing_tick run return run function unt-1:fishing/reel/success
+execute if score #pos_diff unt-1.temp matches ..-1 run scoreboard players operation #pos_diff unt-1.temp *= #-1 unt-1.const
 
-function unt-1:fishing/reel/miss
+execute if score @s unt-1.target_size matches 0 if score #pos_diff unt-1.temp matches ..3 run return run function unt-1:fishing/reel/hit
+execute if score @s unt-1.target_size matches 0 if score #pos_diff unt-1.temp matches 4.. run return run function unt-1:fishing/reel/miss
+
+execute if score @s unt-1.target_size matches 1 if score #pos_diff unt-1.temp matches ..4 run return run function unt-1:fishing/reel/hit
+execute if score @s unt-1.target_size matches 1 if score #pos_diff unt-1.temp matches 5.. run return run function unt-1:fishing/reel/miss
