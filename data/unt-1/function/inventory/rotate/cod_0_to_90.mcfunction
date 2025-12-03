@@ -5,8 +5,7 @@ $item replace entity @s player.cursor with gray_dye[\
     unt-1.rotatable:1b,\
     unt-1.item_type:"cod",\
     unt-1.rotation:1b,\
-    unt-1.blocks_down:1b,\
-    unt-1.blocks_diagonal_down_left:1b,\
+    unt-1.offsets:{o0:0,o1:9,o2:8},\
     unt-1.fish_value:$(fish_value),\
     unt-1.condition:"$(fish_condition)"\
   },\

@@ -1,4 +1,3 @@
-# Data is already stored by store-fish-data, just call the rotation functions
 execute if items entity @s weapon.offhand *[custom_data~{unt-1.item_type:"cod",unt-1.rotation:0b}] run function unt-1:inventory/rotate/cod_0_to_90 with storage unt-1:temp
 execute if items entity @s weapon.offhand *[custom_data~{unt-1.item_type:"cod",unt-1.rotation:1b}] run function unt-1:inventory/rotate/cod_90_to_180 with storage unt-1:temp
 execute if items entity @s weapon.offhand *[custom_data~{unt-1.item_type:"cod",unt-1.rotation:2b}] run function unt-1:inventory/rotate/cod_180_to_270 with storage unt-1:temp

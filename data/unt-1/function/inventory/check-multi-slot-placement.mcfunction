@@ -64,8 +64,7 @@ execute if items entity @s container.22 *[custom_data~{unt-1.blocks_diagonal:1b}
 execute if items entity @s container.23 *[custom_data~{unt-1.blocks_diagonal:1b}] if items entity @s container.32 *[custom_data~{unt-1.blocks_right:1b}] run return run function unt-1:inventory/return-item {slot:32}
 execute if items entity @s container.24 *[custom_data~{unt-1.blocks_diagonal:1b}] if items entity @s container.33 *[custom_data~{unt-1.blocks_right:1b}] run return run function unt-1:inventory/return-item {slot:33}
 execute if items entity @s container.25 *[custom_data~{unt-1.blocks_diagonal:1b}] if items entity @s container.34 *[custom_data~{unt-1.blocks_right:1b}] run return run function unt-1:inventory/return-item {slot:34}
-# blocks_diagonal (slot+10) vs blocks_diagonal_down_left (slot+8)
-# These collide when new fish is 2 slots to the right of existing fish (same row)
+
 execute if items entity @s container.0 *[custom_data~{unt-1.blocks_diagonal:1b}] if items entity @s container.2 *[custom_data~{unt-1.blocks_diagonal_down_left:1b}] run return run function unt-1:inventory/return-item {slot:2}
 execute if items entity @s container.1 *[custom_data~{unt-1.blocks_diagonal:1b}] if items entity @s container.3 *[custom_data~{unt-1.blocks_diagonal_down_left:1b}] run return run function unt-1:inventory/return-item {slot:3}
 execute if items entity @s container.2 *[custom_data~{unt-1.blocks_diagonal:1b}] if items entity @s container.4 *[custom_data~{unt-1.blocks_diagonal_down_left:1b}] run return run function unt-1:inventory/return-item {slot:4}
@@ -98,7 +97,6 @@ execute if items entity @s container.31 *[custom_data~{unt-1.blocks_diagonal:1b}
 execute if items entity @s container.32 *[custom_data~{unt-1.blocks_diagonal:1b}] if items entity @s container.34 *[custom_data~{unt-1.blocks_diagonal_down_left:1b}] run return run function unt-1:inventory/return-item {slot:34}
 execute if items entity @s container.33 *[custom_data~{unt-1.blocks_diagonal:1b}] if items entity @s container.35 *[custom_data~{unt-1.blocks_diagonal_down_left:1b}] run return run function unt-1:inventory/return-item {slot:35}
 
-# Reverse checks
 execute if items entity @s container.2 *[custom_data~{unt-1.blocks_diagonal_down_left:1b}] if items entity @s container.0 *[custom_data~{unt-1.blocks_diagonal:1b}] run return run function unt-1:inventory/return-item {slot:2}
 execute if items entity @s container.3 *[custom_data~{unt-1.blocks_diagonal_down_left:1b}] if items entity @s container.1 *[custom_data~{unt-1.blocks_diagonal:1b}] run return run function unt-1:inventory/return-item {slot:3}
 execute if items entity @s container.4 *[custom_data~{unt-1.blocks_diagonal_down_left:1b}] if items entity @s container.2 *[custom_data~{unt-1.blocks_diagonal:1b}] run return run function unt-1:inventory/return-item {slot:4}
