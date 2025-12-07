@@ -84,3 +84,49 @@ scoreboard players set #blue_mackerel_range unt-1.const 25
 # fish min values
 scoreboard players set #cod_min unt-1.const 10
 scoreboard players set #blue_mackerel_min unt-1.const 10
+
+data modify storage unt-1:fish_config blue_mackerel set value {r0:{offsets:[0,1],model:"0",boundary_check:{type:"col",value:8}},r1:{offsets:[0,9],model:"90",boundary_check:{min:27,max:35,type:"row"}},r2:{offsets:[0,-1],model:"180",boundary_check:{type:"col",value:0}},r3:{offsets:[0,-9],model:"270",boundary_check:{min:9,max:17,type:"row"}}}
+
+
+# Cod - 3-slot L-shaped fish
+data modify storage unt-1:fish_config cod set value {\
+  r0:{offsets:[0,1,10],model:"0",boundary_check:{type:"multi",checks:[{type:"col",value:8},{type:"row",min:27,max:35}]}},\
+  r1:{offsets:[0,9,8],model:"90",boundary_check:{type:"multi",checks:[{type:"col",value:0},{type:"row",min:27,max:35}]}},\
+  r2:{offsets:[0,-1,-10],model:"180",boundary_check:{type:"multi",checks:[{type:"col",value:0},{type:"row",min:9,max:17}]}},\
+  r3:{offsets:[0,-9,-8],model:"270",boundary_check:{type:"multi",checks:[{type:"col",value:8},{type:"row",min:9,max:17}]}}\
+}
+
+data modify storage unt-1:fish_names blue_mackerel set value "Blue Mackerel"
+data modify storage unt-1:fish_names cod set value "Cod"
+scoreboard objectives add unt-1.slot_free dummy
+
+# Inventory placement scoreboards
+scoreboard objectives add unt-1.placement_success dummy
+scoreboard objectives add unt-1.inv_slot dummy
+scoreboard objectives add unt-1.slot_9 dummy
+scoreboard objectives add unt-1.slot_10 dummy
+scoreboard objectives add unt-1.slot_11 dummy
+scoreboard objectives add unt-1.slot_12 dummy
+scoreboard objectives add unt-1.slot_13 dummy
+scoreboard objectives add unt-1.slot_14 dummy
+scoreboard objectives add unt-1.slot_15 dummy
+scoreboard objectives add unt-1.slot_16 dummy
+scoreboard objectives add unt-1.slot_17 dummy
+scoreboard objectives add unt-1.slot_18 dummy
+scoreboard objectives add unt-1.slot_19 dummy
+scoreboard objectives add unt-1.slot_20 dummy
+scoreboard objectives add unt-1.slot_21 dummy
+scoreboard objectives add unt-1.slot_22 dummy
+scoreboard objectives add unt-1.slot_23 dummy
+scoreboard objectives add unt-1.slot_24 dummy
+scoreboard objectives add unt-1.slot_25 dummy
+scoreboard objectives add unt-1.slot_26 dummy
+scoreboard objectives add unt-1.slot_27 dummy
+scoreboard objectives add unt-1.slot_28 dummy
+scoreboard objectives add unt-1.slot_29 dummy
+scoreboard objectives add unt-1.slot_30 dummy
+scoreboard objectives add unt-1.slot_31 dummy
+scoreboard objectives add unt-1.slot_32 dummy
+scoreboard objectives add unt-1.slot_33 dummy
+scoreboard objectives add unt-1.slot_34 dummy
+scoreboard objectives add unt-1.slot_35 dummy

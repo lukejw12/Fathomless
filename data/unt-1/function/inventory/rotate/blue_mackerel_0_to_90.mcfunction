@@ -9,7 +9,7 @@ $item replace entity @s player.cursor with gray_dye[\
     unt-1.fish_value:$(fish_value),\
     unt-1.condition:"$(fish_condition)"\
   },\
-  item_model="unt-1:fish/shallow/blue-mackeral/blue-mackeral_90",\
+  item_model="unt-1:fish/shallow/blue_mackerel/blue_mackerel_90",\
   lore=$(fish_lore),\
   item_name=$(fish_name),\
   tooltip_style="unt-1:basic"\
