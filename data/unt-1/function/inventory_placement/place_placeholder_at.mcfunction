@@ -1,0 +1,2 @@
+
+$item replace entity @s container.$(slot) with minecraft:gray_dye[max_stack_size=1,item_name={"text":""},hide_tooltip={},item_model="minecraft:gui/empty",custom_data={unt-1.placeholder:1b,unt-1.main_slot:$(main_slot)}]
