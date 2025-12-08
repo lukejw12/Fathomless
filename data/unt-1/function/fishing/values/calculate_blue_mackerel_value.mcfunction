@@ -47,5 +47,4 @@ execute store result storage unt-1:temp fish_value_dollars int 1 run scoreboard 
 execute store result storage unt-1:temp fish_value_cents int 1 run scoreboard players get #fish_value_cents_part unt-1.temp
 execute store result storage unt-1:temp fish_value_total int 1 run scoreboard players get #fish_value_cents unt-1.temp
 
-data modify storage unt-1:temp is_trophy set value 1b
 data modify storage unt-1:placement item set value {type:"blue_mackerel"}

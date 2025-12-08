@@ -1,10 +1,2 @@
-
-$function unt-1:inventory_placement/helpers/apply_fish_lore {\
-fish:"$(fish)",\
-slot:$(slot),\
-feet_whole:$(feet_whole),\
-feet_decimal:$(feet_decimal),\
-fish_value_dollars:$(fish_value_dollars),\
-fish_value_cents:$(fish_value_cents),\
-fish_value_total:$(fish_value_total)\
-}
+data modify storage unt-1:temp color_type set value "white"
+function unt-1:inventory_placement/helpers/apply_fish_lore with storage unt-1:temp

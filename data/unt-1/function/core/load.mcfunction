@@ -98,6 +98,8 @@ data modify storage unt-1:fish_config cod set value {\
 
 data modify storage unt-1:fish_names blue_mackerel set value "Blue Mackerel"
 data modify storage unt-1:fish_names cod set value "Cod"
+data modify storage unt-1:fish_desc cod set value [{color:"#8C735C",italic:false,text:"Common and Basic"}]
+data modify storage unt-1:fish_desc blue_mackerel set value [{color:"#8C735C",italic:false,text:"Essentially trash,"},{color:"#8C735C",italic:false,text:"found plentifully"}]
 scoreboard objectives add unt-1.slot_free dummy
 
 # Inventory placement scoreboards
