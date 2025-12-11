@@ -1,5 +1,4 @@
 
-
 $data modify storage unt-1:temp check_offsets set from entity @s Inventory[{Slot:$(invalid_slot)b}].components."minecraft:custom_data"."unt-1.offsets"
 
 scoreboard players set #found_victim unt-1.temp 0

@@ -1,6 +1,6 @@
-# ==========================================
-# CORE CONSTANTS
-# ==========================================
+#==========================================
+#CORE CONSTANTS
+#==========================================
 scoreboard players set #-1 unt-1.const -1
 scoreboard players set #1 unt-1.const 1
 scoreboard players set #2 unt-1.const 2
@@ -16,23 +16,23 @@ scoreboard players set #60 unt-1.const 60
 scoreboard players set #100 unt-1.const 100
 scoreboard players set #1200 unt-1.const 1200
 
-# ==========================================
-# FISH SIZE CONSTANTS (in hundredths of an inch)
-# ==========================================
+#==========================================
+#FISH SIZE CONSTANTS (in hundredths of an inch)
+#==========================================
 scoreboard players set #cod_max_length unt-1.const 4724
 scoreboard players set #mackerel_max_length unt-1.const 1181
 
-# ==========================================
-# FISH VALUE CONSTANTS (in cents)
-# ==========================================
+#==========================================
+#FISH VALUE CONSTANTS (in cents)
+#==========================================
 scoreboard players set #cod_min_value unt-1.const 1530
 scoreboard players set #cod_value_range unt-1.const 720
 scoreboard players set #mackerel_min_value unt-1.const 850
 scoreboard players set #mackerel_value_range unt-1.const 400
 
-# ==========================================
-# OLD FISH VALUE CONSTANTS
-# ==========================================
+#==========================================
+#OLD FISH VALUE CONSTANTS
+#==========================================
 scoreboard players set #cod_base unt-1.const 25
 scoreboard players set #blue_mackerel_base unt-1.const 15
 scoreboard players set #cod_range unt-1.const 35
@@ -40,15 +40,15 @@ scoreboard players set #blue_mackerel_range unt-1.const 25
 scoreboard players set #cod_min unt-1.const 10
 scoreboard players set #blue_mackerel_min unt-1.const 10
 
-# ==========================================
-# SCOREBOARDS - CORE
-# ==========================================
+#==========================================
+#SCOREBOARDS - CORE
+#==========================================
 scoreboard objectives add unt-1.const dummy
 scoreboard objectives add unt-1.temp dummy
 
-# ==========================================
-# SCOREBOARDS - CAMERA & BOAT
-# ==========================================
+#==========================================
+#SCOREBOARDS - CAMERA & BOAT
+#==========================================
 scoreboard objectives add unt-1.head_pitch dummy
 scoreboard objectives add unt-1.camera_dist dummy
 scoreboard objectives add unt-1.target_camera dummy
@@ -65,10 +65,10 @@ scoreboard objectives add unt-1.boat_z_approach dummy
 scoreboard objectives add unt-1.abs_x dummy
 scoreboard objectives add unt-1.abs_z dummy
 scoreboard objectives add unt-1.blocked dummy
-
-# ==========================================
-# SCOREBOARDS - INVENTORY
-# ==========================================
+scoreboard objectives add unt-1.headlight dummy
+#==========================================
+#SCOREBOARDS - INVENTORY
+#==========================================
 scoreboard objectives add unt-1.inv_check dummy
 scoreboard objectives add unt-1.inv_changed dummy
 scoreboard objectives add unt-1.inv_slot dummy
@@ -77,9 +77,9 @@ scoreboard objectives add unt-1.inv_rotation dummy
 scoreboard objectives add unt-1.slot_free dummy
 scoreboard objectives add unt-1.slot_occupied dummy
 
-# ==========================================
-# SCOREBOARDS - FISHING
-# ==========================================
+#==========================================
+#SCOREBOARDS - FISHING
+#==========================================
 scoreboard objectives add unt-1.fishing_tick dummy
 scoreboard objectives add unt-1.fishing_tick_delay dummy
 scoreboard objectives add unt-1.fishing_progress dummy
@@ -92,9 +92,9 @@ scoreboard objectives add unt-1.fishing_time dummy
 scoreboard objectives add unt-1.cast_cooldown dummy
 scoreboard objectives add unt-1.is_trophy_target dummy
 
-# ==========================================
-# SCOREBOARDS - FISHING ARROW & TARGET
-# ==========================================
+#==========================================
+#SCOREBOARDS - FISHING ARROW & TARGET
+#==========================================
 scoreboard objectives add unt-1.arrow_pos dummy
 scoreboard objectives add unt-1.arrow_direction dummy
 scoreboard players set #arrow_min unt-1.const 0
@@ -103,14 +103,14 @@ scoreboard players set #arrow_max unt-1.const 9
 scoreboard objectives add unt-1.target_pos dummy
 scoreboard objectives add unt-1.target_size dummy
 
-# ==========================================
-# SCOREBOARDS - INVENTORY PLACEMENT
-# ==========================================
+#==========================================
+#SCOREBOARDS - INVENTORY PLACEMENT
+#==========================================
 scoreboard objectives add unt-1.placement_success dummy
 
-# ==========================================
-# SCOREBOARDS - INDIVIDUAL SLOTS
-# ==========================================
+#==========================================
+#SCOREBOARDS - INDIVIDUAL SLOTS
+#==========================================
 scoreboard objectives add unt-1.slot_9 dummy
 scoreboard objectives add unt-1.slot_10 dummy
 scoreboard objectives add unt-1.slot_11 dummy
@@ -139,11 +139,11 @@ scoreboard objectives add unt-1.slot_33 dummy
 scoreboard objectives add unt-1.slot_34 dummy
 scoreboard objectives add unt-1.slot_35 dummy
 
-# ==========================================
-# FISH CONFIGURATION DATA
-# ==========================================
+#==========================================
+#FISH CONFIGURATION DATA
+#==========================================
 
-# Blue Mackerel - 2-slot
+#Blue Mackerel - 2-slot
 data modify storage unt-1:fish_config blue_mackerel set value {\
   r0:{offsets:[0,1],model:"0",boundary_check:{type:"col",value:8}},\
   r1:{offsets:[0,9],model:"90",boundary_check:{min:27,max:35,type:"row"}},\
@@ -151,7 +151,7 @@ data modify storage unt-1:fish_config blue_mackerel set value {\
   r3:{offsets:[0,-9],model:"270",boundary_check:{min:9,max:17,type:"row"}}\
 }
 
-# Cod - 3-slot
+#Cod - 3-slot
 data modify storage unt-1:fish_config cod set value {\
   r0:{offsets:[0,1,10],model:"0",boundary_check:{type:"multi",checks:[{type:"col",value:8},{type:"row",min:27,max:35}]}},\
   r1:{offsets:[0,9,8],model:"90",boundary_check:{type:"multi",checks:[{type:"col",value:0},{type:"row",min:27,max:35}]}},\
@@ -159,14 +159,15 @@ data modify storage unt-1:fish_config cod set value {\
   r3:{offsets:[0,-9,-8],model:"270",boundary_check:{type:"multi",checks:[{type:"col",value:8},{type:"row",min:9,max:17}]}}\
 }
 
-# ==========================================
-# FISH NAMES
-# ==========================================
+#==========================================
+#FISH NAMES
+#==========================================
 data modify storage unt-1:fish_names blue_mackerel set value "Blue Mackerel"
 data modify storage unt-1:fish_names cod set value "Cod"
 
-# ==========================================
-# FISH DESCRIPTIONS
-# ==========================================
+#==========================================
+#FISH DESCRIPTIONS
+#==========================================
 data modify storage unt-1:fish_desc cod set value [{color:"#8C735C",italic:false,text:"Common and Basic"}]
 data modify storage unt-1:fish_desc blue_mackerel set value [{color:"#8C735C",italic:false,text:"Essentially trash,"},{color:"#8C735C",italic:false,text:"found plentifully"}]
+title @a times 0 9999999999d 0

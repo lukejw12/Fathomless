@@ -1,3 +1,4 @@
+
 execute store result score #backup_0 unt-1.temp run data get storage unt-1:occupation_map slot_0
 execute store result score #backup_1 unt-1.temp run data get storage unt-1:occupation_map slot_1
 execute store result score #backup_2 unt-1.temp run data get storage unt-1:occupation_map slot_2
@@ -36,7 +37,6 @@ execute store result score #backup_34 unt-1.temp run data get storage unt-1:occu
 execute store result score #backup_35 unt-1.temp run data get storage unt-1:occupation_map slot_35
 
 function unt-1:inventory/rebuild_occupation_map
-
 
 execute if items entity @s container.0 *[custom_data~{unt-1.multi_slot:1b}] run function unt-1:inventory/validation/validate_single_fish {slot:0}
 execute if items entity @s container.1 *[custom_data~{unt-1.multi_slot:1b}] run function unt-1:inventory/validation/validate_single_fish {slot:1}

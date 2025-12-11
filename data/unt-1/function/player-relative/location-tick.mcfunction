@@ -6,4 +6,4 @@ function unt-1:inventory/core/tick
 
 execute as @a store result score @s unt-1.inv_changed run clear @s gray_dye[custom_data~{unt-1.multi_slot:1b}] 0
 execute as @a if score @s unt-1.inv_changed matches 1.. run function unt-1:inventory/rebuild_occupation_map
-execute as @a if score @s unt-1.inv_changed matches 1.. run function unt-1:inventory/validate_all_fish
+execute as @a if score @s unt-1.inv_changed matches 1.. run function unt-1:inventory/validation/validate_all_fish
