@@ -1,6 +1,4 @@
 scoreboard players add @s unt-1.fishing_progress 25
-
-playsound minecraft:entity.experience_orb.pickup player @s ~ ~ ~ 1 1.5
 particle happy_villager ~ ~1 ~ 0.3 0.3 0.3 0 10
 
 scoreboard players set @s unt-1.fishing_cooldown 7

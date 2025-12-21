@@ -140,4 +140,6 @@ execute if score @s unt-1.arrow_pos matches 27 run data modify storage unt-1:tem
 execute if score @s unt-1.arrow_pos matches 28 run data modify storage unt-1:temp arrow_char set value "\ua01c"
 execute if score @s unt-1.arrow_pos matches 29 run data modify storage unt-1:temp arrow_char set value "\ua01d"
 
+execute if score @s unt-1.target_size matches 1 run data modify storage unt-1:temp hud_offset set value "\uf011"
+execute if score @s unt-1.target_size matches 0 run data modify storage unt-1:temp hud_offset set value "\uf000"
 function unt-1:fishing/render_display with storage unt-1:temp

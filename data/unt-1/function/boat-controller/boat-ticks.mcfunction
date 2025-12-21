@@ -2,7 +2,7 @@ execute if entity @a[predicate=unt-1:boat-movement/forwards] run function unt-1:
 execute if entity @a[predicate=unt-1:boat-movement/backwards] run function unt-1:boat-controller/boat-apply-motion {speed:-0.1}
 execute if entity @a[predicate=unt-1:boat-movement/left] run rotate @s ~-5 ~
 execute if entity @a[predicate=unt-1:boat-movement/right] run rotate @s ~5 ~
-
+execute as @a at @s run function unt-1:boat-controller/sound
 execute on passengers if entity @s[type=item_display] run data modify entity @s Rotation set from entity @e[type=armor_stand,tag=unt-1.boat,limit=1,sort=nearest] Rotation
 
 execute as @a at @s if entity @e[type=armor_stand,tag=unt-1.boat,distance=..5] run function unt-1:boat-controller/camera-zoom

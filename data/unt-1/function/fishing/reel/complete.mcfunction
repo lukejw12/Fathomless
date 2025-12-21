@@ -1,5 +1,8 @@
+
 scoreboard players operation #fishing_seconds unt-1.temp = @s unt-1.fishing_time
 scoreboard players operation #fishing_seconds unt-1.temp /= #20 unt-1.const
+## Sound: Fish Collect?
+playsound minecraft:entity.fish.swim ui @s ~ ~ ~ 0.5 0.9 1
 
 scoreboard players set #speed_bonus unt-1.temp 0
 execute if score #fishing_seconds unt-1.temp matches ..9 run scoreboard players set #speed_bonus unt-1.temp 14

@@ -1,4 +1,6 @@
+## Sound: Ding?
 scoreboard players add @s unt-1.fishing_progress 20
+playsound minecraft:entity.experience_orb.pickup ui @s ~ ~ ~ 0.5 1.64 1
 
 execute if entity @s[tag=unt-1.trophy_target] run tag @a[tag=unt-1.fishing,limit=1] add unt-1.caught_trophy
 
